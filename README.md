@@ -5,7 +5,7 @@ I wanted to write a script that takes a collection of restaurant reviews that pa
 Because of my machine learning class's retroactive cheating policy, I cannot post the logistic regression model on a public forum like Github given its similarity to the assignment, but I can share it upon request if appropriate. For this reason, I have a private folder and input weights as an argument to the relevant script. Also for this same reason, I am keeping certain methods of embedding processing hidden, but will provide a description to implement them.
 <!-- guess I don't need clustering? Maybe see if I can cluster distinct identities after filtering words-->
 
-## Improvements
+## Areas for Improvement
 - Boosting instead of singular logistic regression should increase accuracy-- my plan is adaboosting which I can publicly post.
 - Optimize a GLoVe dictionary with restaurant vocabulary to streamline computation times.
 - Look into clustering categories.
