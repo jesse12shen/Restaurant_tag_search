@@ -16,11 +16,14 @@ I used the pre-trained word vector as my original source: Wikipedia 2014 + Gigaw
     "output", type=str: Output txt file name, the smaller dictionary file that will be exported in text form.
     "fold", type=int: Fold of GLoVe division, the output file's size will be dictated by this: total size / fold 
     "central_word", type=str: Word to center GLoVe filtering on. https://nlp.stanford.edu/projects/glove/ describes how nearest neighbors share a high degree of relevancy in the vector space.
-    My command line is set to: glove.6B.300d.txt\ 300\ 300_1e4_glove_embedding.tsv\ 40\ food
+    My command line is set to: $ python glove_shrink_relation.py\ glove.6B.300d.txt\ 300\ 300_1e4_glove_embedding.tsv\ 40\ food
   *  When testing the large dictionary: the truncated and processed file can be ~500 MB so I also needed to use git-lfs and its relevant setup, https://github.com/git-lfs/git-lfs/tree/main
   * 11/7/23 NOTE: 300_2e5_glove_embedding.tsv is NOT a required file and is from earlier testing.
   * 300_1e4_glove_embedding.tsv balances runtime and depth fine -- the 1e4  referring to ~10,000 entries.
-
+### Review Filtering Classifier
+As of 11/23: the classifier I use is a logistic regression model. Because of its similarity to a class assignment, I have a private sigmoid_train.py module that computes weights and calculates likelihoods. This model is available upon request and takes a GLoVe-calculated dataset of test and training data to produce weights, and reference data, for a given vector length, learning rate, and number of epochs.
+### Review data
+As of 11/23: reviews.txt consists of 3 excerpts from Oregonlive.com: https://www.oregonlive.com/dining/2023/08/pan-con-queso-is-the-next-portland-pizzeria-you-need-to-know-about.html, https://www.oregonlive.com/dining/2023/08/grana-pdx-specializes-in-folded-neapolitan-pizzas-rick-steves-is-to-thank.html, https://www.oregonlive.com/dining/2023/08/i-tried-to-dine-out-for-a-day-on-only-20-in-eugene-heres-what-happened.html. The fourth entry is a toy example with food terms, an article, and 2 "good"'s.
 
 ## Areas for Improvement
 - Boosting instead of singular logistic regression should increase accuracy-- my plan is adaboosting which I can publicly post.
