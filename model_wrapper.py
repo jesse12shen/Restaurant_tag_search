@@ -122,7 +122,7 @@ for l_temp in range(len(input_data)):
     Weighted average of GLoVe embeddings for the input string, weighted upon 
     word appearances.
     '''
-goodbad, likelihood = s_t.predict_loss(w_gb, features_gb)
+goodbad, likelihood = s_t.predict_like(w_gb, features_gb)
 '''
 s_t.predict_loss(weights: np.ndarray, features: np.ndarray) is a function that
 calculates likelihood based on the sigmoid probability distribution 
