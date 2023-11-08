@@ -8,6 +8,7 @@ Because of my machine learning class's retroactive cheating policy, I cannot pos
 - Original GLoVe embeddings from https://github.com/stanfordnlp/GloVe
 I used the pre-trained word vector as my original source: Wikipedia 2014 + Gigaword 5 (6B tokens, 400K vocab, uncased, 300d vectors, 822 MB download)
   * When testing the large dictionary: the truncated and processed file can be ~500 MB so I also needed to use git-lfs and its relevant setup, https://github.com/git-lfs/git-lfs/tree/main
+  * 11/7/23 NOTE: 300_2e5_glove_embedding.tsv is NOT a required file and is from earlier testing.
 
 
 ## Areas for Improvement
