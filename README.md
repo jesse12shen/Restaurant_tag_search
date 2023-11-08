@@ -12,7 +12,7 @@ I used the pre-trained word vector as my original source: Wikipedia 2014 + Gigaw
 
 ## Areas for Improvement
 - Boosting instead of singular logistic regression should increase accuracy-- my plan is adaboosting which I can publicly post.
-- Finding a way to extract the article text from webpages.
+- Finding a way to extract the article text from webpages-- likely Beautiful Soup. https://beautiful-soup-4.readthedocs.io/en/latest/
 - Optimize a GLoVe dictionary with restaurant vocabulary to streamline computation times.
 - Look into clustering categories.
 - Integrating other NLP methods?
