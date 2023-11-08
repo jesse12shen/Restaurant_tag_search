@@ -7,7 +7,7 @@ Because of my machine learning class's retroactive cheating policy, I cannot pos
 ## Dependencies
 - Original GLoVe embeddings from https://github.com/stanfordnlp/GloVe
 I used the pre-trained word vector as my original source: Wikipedia 2014 + Gigaword 5 (6B tokens, 400K vocab, uncased, 300d vectors, 822 MB download)
-  * The truncated and processed file is ~500 MB so I also needed to use git-lfs and its relevant setup, https://github.com/git-lfs/git-lfs/tree/main
+  * When testing the large dictionary: the truncated and processed file can be ~500 MB so I also needed to use git-lfs and its relevant setup, https://github.com/git-lfs/git-lfs/tree/main
 
 
 ## Areas for Improvement
