@@ -154,5 +154,3 @@ goodbad, likelihood = predict_loss(w_gb, features_gb)
 goodonly = input_data.iloc[([indices for indices in goodbad == 1])]
 if goodonly.size == 0:
     print('Empty "good" restaurant list')
-
-print('work-in-progress version')
